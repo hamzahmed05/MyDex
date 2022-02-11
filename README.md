@@ -40,7 +40,7 @@ Essentially, it implements the token-to-ether swap. However, instead of sending 
 
 
 # Setup
-Must have yarn installed.
+Must have yarn and node installed.
 
 `yarn add -D hardhat`
 
