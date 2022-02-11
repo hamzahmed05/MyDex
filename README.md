@@ -6,11 +6,11 @@ More detailed, it's an algorithm that allows to make pools and fill them with li
 
 Tools:
 
-- hardhat: development environment to compile, deploy, and test ethereum software 
-- Ethers JS:  complete ethereum wallet implementation and utilities
+- hardhat: development environment to compile, deploy, and test ethereum software. 
+- Ethers JS:  complete ethereum wallet implementation and utilities.
 
 Libary:
-- OpenZeppelin - ERC20 token
+- OpenZeppelin - ERC20 token.
 
 # Detailed Overview
 Although I wasn't required to make a factory, I felt that it was very import to the functionality of the exchange. The project makes use of 3 contracts: Token, Exchange, and Factory. 
@@ -25,7 +25,7 @@ A factory is a registry contract that allows to create new exchanges, keeps trac
 ## Pricing calculation
 The price is calculated through the relation of reserves. When the exchange contract is deployed, we call addLiquditiy function to deposit 2000 tokens and 10000 ethers. So, the price of 1 token equals to 0.5 ethers and 1 ether equals to 2 tokens. 
 
-For example, in the case a user comes along and decides to swap 2000 tokens for ether and the exchange receives 1000 ethers(which is everything on the contract), the exchange would be empty of tokens. To combat this, the correct price formula is   (reserve2 * amountOfTokens) / (reserve1 + amountOfTokens). Using this formula, we would get 1.998 tokens for 1 ether and 0.999 ether for 2 tokens. This way neither of the reserves is ever 0. Ultimately, making reserves infinite. 
+For example, in the case a user comes along and decides to swap 2000 tokens for ether and the exchange receives 1000 ethers(which is everything on the contract), the exchange would be empty of tokens. To combat this, the correct price formula is   (reserve2 * amountOfTokens) / (reserve1 + amountOfTokens). Using this formula, we would get 1.998 tokens in exchange for 1 ether and 0.999 ether in exchange for 2 tokens. This way neither of the reserves is ever 0. Ultimately, making reserves infinite. 
 
 ## Token swap
 there are two function for token-ether swaps: tokenEthSwap and EthTokenSwap. And another function for token-for-token swaps. 
