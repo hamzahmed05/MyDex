@@ -1,5 +1,5 @@
 # The Project
-A clone of uniswap v1 for the fractional take-home assessment.
+A clone of uniswap v1.
 Simply, uniswap is a decentralized exchane that's running on the ethereum blockchain. 
 
 More detailed, it's an algorithm that allows to make pools and fill them with liquidity to let users exchange tokens using the liquidity in the pool. Any user can deposit their funds into a liquidity pool -- and be able to benefit it by receiving Liquidity provider tokens. But for the simplicity of this project, we won't be implementing the LP tokens functionality. 
